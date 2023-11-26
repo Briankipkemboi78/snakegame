@@ -35,16 +35,16 @@ class Snake:
 
     def move_up(self):
         if self.head.heading() != DOWN:  # Avoid reversing direction
-            self.head.setheading(90)
+            self.head.setheading(UP)
 
     def move_left(self):
         if self.head.heading() != RIGHT:  # Avoid reversing direction
-            self.head.setheading(180)
+            self.head.setheading(LEFT)
 
     def move_right(self):
         if self.head.heading() != LEFT:  # Avoid reversing direction
-            self.head.setheading(0)
+            self.head.setheading(RIGHT)
 
     def move_down(self):
         if self.head.heading() != UP:  # Avoid reversing direction
-            self.head.setheading(270)
+            self.head.setheading(DOWN)
