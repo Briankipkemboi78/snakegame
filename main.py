@@ -1,6 +1,7 @@
 import time
-from turtle import Turtle, Screen
+from turtle import Screen
 from snake import Snake
+from food import Food
 
 
 screen = Screen()
@@ -11,6 +12,7 @@ screen.tracer(0)
 
 
 snake = Snake()
+food = Food()
 
 screen.listen()
 screen.onkeypress(snake.move_up, "Up")
