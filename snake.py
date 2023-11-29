@@ -20,12 +20,18 @@ class Snake:
         for position in STARTING_POSITION:
             self.add_segment(position)
 
+
+
     def add_segment(self, position):
         new_segment = Turtle(shape="square")
         new_segment.penup()
         new_segment.goto(position)
         new_segment.color("white")
         self.segments.append(new_segment)
+
+    def extend(self):
+        #Add segment after every food.
+        self.add_segment(self.segments[-1].position())
 
     def move(self):
         for seg_num in range(len(self.segments) - 1, 0, -1):
